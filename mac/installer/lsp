@@ -1,0 +1,20 @@
+#!/bin/bash
+mkdir $HOME/lsp
+mkdir -p $HOME/.cache/tmp
+
+#kotlin
+mkdir -p ~/lsp/KotlinLanguageServer
+cd ~/lsp/KotlinLanguageServer
+curl -L https://github.com/fwcd/KotlinLanguageServer/releases/download/0.1.13/server-0.1.13.zip -O
+unzip server-0.1.13.zip
+
+#python
+pip3 install python-language-server
+
+#swift
+#https://github.com/apple/sourcekit-lsp/blob/master/README.md
+#https://swift.org/download/#releases
+
+#xml
+curl -L https://github.com/angelozerr/lsp4xml/releases/download/0.3.0/org.eclipse.lsp4xml-0.3.0-uber.jar -o ~/lsp/org.eclipse.lsp4xml-0.3.0-uber.jar
+

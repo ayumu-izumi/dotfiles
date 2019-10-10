@@ -1,0 +1,5 @@
+"mac-------------------------------------------------------
+"previm
+let g:previm_open_cmd='open -a "Google Chrome"'
+"nerdtree-git
+set shell=/usr/local/bin/zsh

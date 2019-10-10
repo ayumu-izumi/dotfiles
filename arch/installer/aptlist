@@ -1,0 +1,4 @@
+#!/bin/bash
+apt update
+apt install zsh vim git tig tmux
+apt upgrade

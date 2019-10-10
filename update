@@ -1,0 +1,10 @@
+#!/bin/bash
+SDIR=$(cd $(dirname $0);pwd)
+OS=$1
+UPDATER=$SDIR/$OS/updater
+
+cd $UPDATER
+for FILE in *
+do
+	./$FILE
+done

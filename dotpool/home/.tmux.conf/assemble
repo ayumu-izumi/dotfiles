@@ -1,0 +1,15 @@
+<arch>
+common/1
+arch/1
+arch/99
+</>
+<mac>
+common/1
+mac/1
+mac/99
+</>
+<wsl>
+common/1
+wsl/1
+wsl/99
+</>

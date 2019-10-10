@@ -1,0 +1,6 @@
+#!/bin/bash
+echo '
+#!/bin/bash
+exec /mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe `wslpath -w $@`
+' > /usr/bin/google-chrome
+chmod 755 /usr/bin/google-chrome

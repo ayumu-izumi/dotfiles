@@ -1,0 +1,43 @@
+#!/bin/zsh
+wd=$(cd $(dirname $0); pwd)
+
+cd ${wd}/dotpool/home
+for d (* .[^\.]*) {
+	isInTabFlg=false
+	while read line
+	do
+		if [[ "$line" = "</>" ]]; then
+			isInTabFlg=false
+		fi
+		if $isInTabFlg; then
+			cat ${wd}/dotpool/home/${d}/"$line" >> $homeFile
+		fi
+		if [[ "$line" =~ "<[^/]*>" ]]; then
+			envName=`echo "$line"|sed -e 's/<\(.*\)>/\1/'`
+			homeFile=${wd}/${envName}/home/$d
+			rm -f $homeFile
+			touch $homeFile
+			isInTabFlg=true
+		fi
+	done < ${wd}/dotpool/home/$d/assemble
+}
+
+cd ${wd}/dotpool/xdgconfig
+for d (* .[^\.]*) {
+	while read line
+	do
+		if [[ "$line" = "</>" ]]; then
+			isInTabFlg=false
+		fi
+		if [[ $isInTabFlg ]]; then
+			cat ${wd}/dotpool/xdgconfig/${d}/"$line" >> $xdgconfigFile
+		fi
+		if [[ "$line" =~ "<[^/]*>" ]]; then
+			envName=`echo "$line"|sed -e 's/<\(.*\)>/\1/'`
+			xdgconfigFile=${wd}/${envName}/xdgconfig/$d
+			rm -f $xdgconfigFile
+			touch $xdgconfigFile
+			isInTabFlg=true
+		fi
+	done < ${wd}/dotpool/xdgconfig/$d/assemble
+}

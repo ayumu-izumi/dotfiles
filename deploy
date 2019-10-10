@@ -1,0 +1,15 @@
+#!/bin/zsh
+SDIR=$(cd $(dirname $0);pwd)
+OS=$1
+
+DOT=$SDIR/$OS/home
+cd $DOT
+for FILE (* .[^\.]*) {
+    ln -snfv $DOT/$FILE $HOME/$FILE
+}
+
+DOT=$SDIR/$OS/xdgconfig
+cd $DOT
+for FILE (* .[^\.]*) {
+    ln -snfv $DOT/$FILE $XDG_CONFIG_HOME/$FILE
+}

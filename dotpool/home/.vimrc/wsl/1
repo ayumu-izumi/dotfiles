@@ -1,0 +1,13 @@
+"wsl-------------------------------------------------------
+"previm
+let g:previm_open_cmd='google-chrome'
+
+"deoplate-mssql
+let g:deoplete#sources#mssql#server='192.168.2.117'
+let g:deoplete#sources#mssql#user='sa'
+let g:deoplete#sources#mssql#password='40246988'
+let g:deoplete#sources#mssql#db='アルク化成'
+
+"for tmux
+noremap <silent> <Space>y :w !win32yank.exe -i<CR><CR>
+noremap <silent> <Space>p :r !win32yank.exe -o<CR><CR>

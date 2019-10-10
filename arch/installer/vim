@@ -1,0 +1,7 @@
+#!/bin/bash
+VIM_HOME=$HOME/.vim
+git clone --recursive https://github.com/ayumu-izumi/.vim.git $HOME/.vim
+
+# syntax
+cd $VIM_HOME/syntax
+wget https://raw.githubusercontent.com/aklt/plantuml-syntax/master/syntax/plantuml.vim
