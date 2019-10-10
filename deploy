@@ -1,15 +1,21 @@
 #!/bin/zsh
+setopt +o nomatch
 SDIR=$(cd $(dirname $0);pwd)
 OS=$1
 
 DOT=$SDIR/$OS/home
 cd $DOT
-for FILE (* .[^\.]*) {
+for FILE (`ls -a|grep -v "\.$"`) {
     ln -snfv $DOT/$FILE $HOME/$FILE
 }
 
 DOT=$SDIR/$OS/xdgconfig
 cd $DOT
-for FILE (* .[^\.]*) {
+for FILE (`ls -a|grep -v "\.$"`) {
     ln -snfv $DOT/$FILE $XDG_CONFIG_HOME/$FILE
 }
+
+# irregular
+mv $XDG_CONFIG_HOME/init.vim $XDG_CONFIG_HOME/nvim
+mv $XDG_CONFIG_HOME/dein.toml $XDG_CONFIG_HOME/nvim
+mv $XDG_CONFIG_HOME/dein_lazy.toml $XDG_CONFIG_HOME/nvim

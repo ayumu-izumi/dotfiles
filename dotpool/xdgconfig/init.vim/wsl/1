@@ -1,0 +1,4 @@
+"wsl-------------------------------------------------------
+"for tmux
+noremap <silent> <Space>y :w !win32yank.exe -i<CR><CR>
+noremap <silent> <Space>p :r !win32yank.exe -o<CR><CR>

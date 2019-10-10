@@ -1,0 +1,7 @@
+mkdir -p ~/.config/nvim
+sudo apt install neovim
+sudo apt install python3-neovim
+mkdir -p ~/.cache/dein
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh ~/.cache/dein
+rm -f ./installer.sh

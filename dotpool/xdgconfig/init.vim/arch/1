@@ -1,0 +1,4 @@
+"arch-------------------------------------------------------
+"for tmux
+noremap <silent> <Space>y :w !xsel --clipboard --input<CR><CR>
+noremap <silent> <Space>p :r !xsel --clipboard --output<CR><CR>

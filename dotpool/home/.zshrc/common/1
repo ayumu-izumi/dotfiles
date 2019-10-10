@@ -13,8 +13,11 @@ fi
 
 # Customize to your needs...
 
+# set
+setopt +o nomatch
 # export
 export SHELL=/usr/bin/zsh
+export XDG_CONFIG_HOME=~/.config
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

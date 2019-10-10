@@ -1,0 +1,6 @@
+[[plugins]]
+repo = 'kazuph/previm'
+rev = 'feature/add-plantuml-plugin'
+hook_add = '''
+let g:previm_open_cmd='google-chrome'
+'''

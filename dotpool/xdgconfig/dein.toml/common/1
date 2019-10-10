@@ -1,0 +1,90 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
+
+[[plugins]]
+repo = 'Townk/vim-autoclose'
+
+[[plugins]]
+repo = 'joshdick/onedark.vim'
+hook_add = '''
+  colorscheme onedark
+'''
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+  set signcolumn=yes
+  set updatetime=1000
+  nnoremap [gitgutter] <Nop>
+  nmap <C-h> [gitgutter]
+  nmap [gitgutter]j <Plug>GitGutterNextHunk
+  nmap [gitgutter]k <Plug>GitGutterPrevHunk
+  nmap [gitgutter]u <Plug>GitGutterUndoHunk
+'''
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_add = '''
+  command Gst :Gstatus
+  command Gdf :Gdiff
+  command Gbl :Gblame
+'''
+
+[[plugins]]
+repo = 'osyo-manga/vim-anzu'
+hook_add = '''
+  nmap n <Plug>(anzu-n-with-echo)
+  nmap N <Plug>(anzu-N-with-echo)
+  nmap * <Plug>(anzu-star)
+  nmap # <Plug>(anzu-sharp)
+'''
+
+[[plugins]]
+repo = 'crooloose/nerdtree'
+hook_add = '''
+let g:NERDTreeIndicatorMapCustom = {
+	\ "Modified"  : "✹",
+	\ "Staged"    : "✚",
+	\ "Untracked" : "✭",
+	\ "Renamed"   : "➜",
+	\ "Unmerged"  : "═",
+	\ "Deleted"   : "✖",
+	\ "Dirty"     : "✗",
+	\ "Clean"     : "✔︎",
+	\ 'Ignored'   : '☒',
+	\ "Unknown"   : "?"
+\ }
+'''
+
+[[plugins]]
+repo = 'godlygeek/tabular'
+
+[[plugins]]
+repo = 'tpope/vim-markdown'
+hook_add = '''
+let g:markdown_fenced_languages=['python','bash=sh','vb.net','sql','uml=plantuml']
+'''
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+[[plugins]]
+repo = 'esnme/ultrajson'
+
+[[plugins]]
+repo = 'kana/vim-gf-diff'
+
+[[plugins]]
+repo = 'kana/vim-gf-user'
+
+[[plugins]]
+repo = 'tpope/vim-repeat'
+
+[[plugins]]
+repo = 'kshenoy/vim-signature'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
