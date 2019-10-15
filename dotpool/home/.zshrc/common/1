@@ -18,6 +18,8 @@ setopt +o nomatch
 # export
 export SHELL=/usr/bin/zsh
 export XDG_CONFIG_HOME=~/.config
+# alias
+alias vi=nvim
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

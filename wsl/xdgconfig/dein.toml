@@ -43,23 +43,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = '''
-let g:NERDTreeIndicatorMapCustom = {
-	\ "Modified"  : "✹",
-	\ "Staged"    : "✚",
-	\ "Untracked" : "✭",
-	\ "Renamed"   : "➜",
-	\ "Unmerged"  : "═",
-	\ "Deleted"   : "✖",
-	\ "Dirty"     : "✗",
-	\ "Clean"     : "✔︎",
-	\ 'Ignored'   : '☒',
-	\ "Unknown"   : "?"
-\ }
-'''
-
-[[plugins]]
 repo = 'godlygeek/tabular'
 
 [[plugins]]
@@ -69,7 +52,24 @@ let g:markdown_fenced_languages=['python','bash=sh','vb.net','sql','uml=plantuml
 '''
 
 [[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
 repo = 'Xuyuanp/nerdtree-git-plugin'
+hook_add = '''
+let g:NERDTreeIndicatorMapCustom = {
+	\ "Modified"  : "*",
+	\ "Staged"    : "+",
+	\ "Untracked" : "|",
+	\ "Renamed"   : "@",
+	\ "Unmerged"  : "=",
+	\ "Deleted"   : "-",
+	\ "Dirty"     : "!",
+	\ "Clean"     : "^",
+	\ "Ignored"   : "_",
+	\ "Unknown"   : "?"
+\ }
+'''
 
 [[plugins]]
 repo = 'esnme/ultrajson'
@@ -88,3 +88,15 @@ repo = 'kshenoy/vim-signature'
 
 [[plugins]]
 repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+merge = 0
+build = './install.sh nightly'
+
+[[plugins]]
+repo = 'kazuph/previm'
+rev = 'feature/add-plantuml-plugin'
+hook_add = '''
+let g:previm_open_cmd="google-chrome"
+'''
