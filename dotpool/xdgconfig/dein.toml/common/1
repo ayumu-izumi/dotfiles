@@ -43,7 +43,7 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'crooloose/nerdtree'
+repo = 'scrooloose/nerdtree'
 hook_add = '''
 let g:NERDTreeIndicatorMapCustom = {
 	\ "Modified"  : "✹",

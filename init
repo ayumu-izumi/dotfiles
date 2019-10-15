@@ -25,7 +25,6 @@ for d (`ls -a|grep -v "\.$"`) {
 
 cd ${wd}/dotpool/xdgconfig
 for d (`ls -a|grep -v "\.$"`) {
-	echo $d
 	isInTabFlg=false
 	while read line
 	do
