@@ -46,12 +46,6 @@ hook_add = '''
 repo = 'godlygeek/tabular'
 
 [[plugins]]
-repo = 'tpope/vim-markdown'
-hook_add = '''
-let g:markdown_fenced_languages=['python','bash=sh','vb.net','sql','uml=plantuml']
-'''
-
-[[plugins]]
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]

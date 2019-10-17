@@ -16,6 +16,7 @@ set cindent
 set tabstop=4
 set shiftwidth=4
 vnoremap * "zy:let @/ = @z<CR>n
+let g:markdown_fenced_languages=['python','bash=sh','vb.net','sql','uml=plantuml']
 
 "plugin
 if &compatible
