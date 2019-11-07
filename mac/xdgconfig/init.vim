@@ -2,6 +2,8 @@
 "file
 set noswapfile
 set nobackup
+set fileencodings=sjis,utf-8
+set hidden
 
 "view
 set showtabline=2
