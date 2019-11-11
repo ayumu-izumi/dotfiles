@@ -1,10 +1,9 @@
 [core]
-	editor = vim -c \"set fenc=utf-8\"
+	editor = nvim
 	pager = less -cm
 	quotepath = false
-	editor = vim
 [color]
 	ui = true
 [user]
-	email = risanOolongTea@gmail.com
+	email = a.izumi@bizrefine.co.jp
 	name = ayumu izumi

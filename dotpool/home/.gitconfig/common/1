@@ -1,7 +1,6 @@
 [core]
-	editor = vim -c \"set fenc=utf-8\"
+	editor = nvim
 	pager = less -cm
 	quotepath = false
-	editor = vim
 [color]
 	ui = true
