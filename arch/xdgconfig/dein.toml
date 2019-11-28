@@ -83,6 +83,14 @@ repo = 'tpope/vim-surround'
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+ 
+###fzf.vim
+[[plugins]]
+repo = 'junegunn/fzf.vim'
 [[plugins]]
 repo = 'kazuph/previm'
 rev = 'feature/add-plantuml-plugin'
