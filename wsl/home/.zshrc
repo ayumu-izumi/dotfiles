@@ -17,7 +17,10 @@ fi
 setopt +o nomatch
 # export
 export SHELL=/usr/bin/zsh
-export XDG_CONFIG_HOME=~/.config
+export XDG_CONFIG_HOME=$HOME/.config
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export GO111MODULE=on
 # alias
 alias vi=nvim
 
@@ -39,3 +42,6 @@ fbr() {
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
 # /common-------------------------------------------------
+# wsl--------------------------------------------------
+export PATH=$PATH:/usr/local/go/bin
+# /wsl-------------------------------------------------

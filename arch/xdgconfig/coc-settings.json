@@ -1,0 +1,25 @@
+{
+	"languageserver":{
+		"elmLS": {
+			"command": "elm-language-server",
+			"filetypes": ["elm"],
+			"rootPatterns": ["elm.json"],
+			"initializationOptions": {
+				"elmPath": "elm",
+				"elmFormatPath": "elm-format",
+				"elmTestPath": "elm-test",
+				"elmAnalyseTrigger": "change" 
+			}
+		},
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+			"filetypes": ["go"],
+			"initializationOptions": {
+				"usePlaceholders": true
+			}
+		}
+	},
+	"python.jediEnabled":false,
+	"eslint.filetypes": ["javascript", "vue"]
+}

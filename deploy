@@ -19,3 +19,4 @@ for FILE (`ls -a|grep -v "\.$"`) {
 mv $XDG_CONFIG_HOME/init.vim $XDG_CONFIG_HOME/nvim
 mv $XDG_CONFIG_HOME/dein.toml $XDG_CONFIG_HOME/nvim
 mv $XDG_CONFIG_HOME/dein_lazy.toml $XDG_CONFIG_HOME/nvim
+mv $XDG_CONFIG_HOME/coc-settings.json $XDG_CONFIG_HOME/nvim
