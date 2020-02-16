@@ -1,0 +1,41 @@
+"common----------------------------------------------------
+set clipboard=unnamed,autoselect
+set surround
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" general
+nnoremap ,a :<C-u>action GotoAction<CR>
+vnoremap ,a :<C-u>action GotoAction<CR>
+nnoremap ,e :<C-u>action SearchEverywhere<CR>
+nnoremap ,s :<C-u>action FileStructurePopup<CR>
+nnoremap ,g :<C-u>action FindInPath<CR>
+nnoremap ,r :<C-u>action RecentFiles<CR>
+
+" jump on code
+nnoremap gd :<C-u>action GotoDeclaration<CR>
+nnoremap gs :<C-u>action GotoSuperMethod<CR>
+nnoremap gi :<C-u>action GotoImplementation<CR>
+nnoremap gf :<C-u>action GotoFile<CR>
+nnoremap gb :<C-u>action JumpToLastChange<CR>
+nnoremap gu :<C-u>action ShowUsages<CR>
+nnoremap gt :<C-u>action GotoTest<CR>
+
+" code editing
+nnoremap == :<C-u>action ReformatCode<CR>
+vnoremap == :<C-u>action ReformatCode<CR>
+
+" show information
+nnoremap <C-I> :<C-u>action QuickJavaDoc<CR>
+
+nnoremap ,p :<C-u>action PasteMultiple<CR>
+nnoremap ,P :<C-u>action PasteMultiple<CR>
+
+nnoremap f :<C-u>action AceAction<CR>
+vnoremap f :<C-u>action AceAction<CR>
+
+" kick intellij commands
+nnoremap R :<C-u>action ChooseRunConfiguration<CR>
+"/common---------------------------------------------------
