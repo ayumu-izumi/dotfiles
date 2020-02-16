@@ -2,7 +2,7 @@
 "file
 set noswapfile
 set nobackup
-set fileencodings=sjis,utf-8
+set fileencodings=utf-8,sjis
 set hidden
 
 "view
