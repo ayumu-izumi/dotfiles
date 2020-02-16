@@ -1,4 +1,7 @@
 "common----------------------------------------------------
+"common keymaps
+source $HOME/.vimrc.keymap
+
 "file
 set noswapfile
 set nobackup
