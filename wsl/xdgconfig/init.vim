@@ -23,6 +23,20 @@ set shiftwidth=4
 vnoremap * "zy:let @/ = @z<CR>n
 let g:markdown_fenced_languages=['python','bash=sh','vb.net','sql','uml=plantuml']
 
+"myCommand
+command FP call s:GetFilePath()
+function s:GetFilePath()
+	let filePath=expand("%:p")
+	call s:setreg0(filePath)
+	call s:setregClipBoard(filePath)
+	echo filePath
+endfunction
+
+"commonFunc
+function s:setreg0(str)
+	call setreg('0',a:str)
+endfunction
+
 "plugin
 if &compatible
 	set nocompatible
@@ -188,6 +202,12 @@ let g:fzf_colors =
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 "/common---------------------------------------------------
 "wsl-------------------------------------------------------
+"commonFunc
+function s:setregClipBoard(str)
+	call system('win32yank.exe -i',a:str)
+endfunction
+
+
 "for tmux
 noremap <silent> <Space>y :w !win32yank.exe -i<CR><CR>
 noremap <silent> <Space>p :r !win32yank.exe -o<CR><CR>
