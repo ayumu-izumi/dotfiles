@@ -1,6 +1,6 @@
 "wsl-------------------------------------------------------
 "commonFunc
-function s:setregClipBoard(str)
+function! s:setregClipBoard(str)
 	call system('win32yank.exe -i',a:str)
 endfunction
 

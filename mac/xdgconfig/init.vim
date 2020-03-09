@@ -36,6 +36,9 @@ endfunction
 function s:setreg0(str)
 	call setreg('0',a:str)
 endfunction
+function s:setregClipBoard(str)
+	call system('+',a:str)
+endfunction
 
 "plugin
 if &compatible

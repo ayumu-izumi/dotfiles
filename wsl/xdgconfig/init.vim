@@ -36,6 +36,9 @@ endfunction
 function s:setreg0(str)
 	call setreg('0',a:str)
 endfunction
+function s:setregClipBoard(str)
+	call system('+',a:str)
+endfunction
 
 "plugin
 if &compatible
@@ -203,7 +206,7 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 "/common---------------------------------------------------
 "wsl-------------------------------------------------------
 "commonFunc
-function s:setregClipBoard(str)
+function! s:setregClipBoard(str)
 	call system('win32yank.exe -i',a:str)
 endfunction
 
