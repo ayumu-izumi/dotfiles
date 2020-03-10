@@ -23,7 +23,7 @@ set shiftwidth=4
 vnoremap * "zy:let @/ = @z<CR>n
 let g:markdown_fenced_languages=['python','bash=sh','vb.net','sql','uml=plantuml']
 
-"myCommand
+"# COMMAND
 command FP call s:GetFilePath()
 function s:GetFilePath()
 	let filePath=expand("%:p")
@@ -32,13 +32,16 @@ function s:GetFilePath()
 	echo filePath
 endfunction
 
-"commonFunc
+"## COMMON
 function s:setreg0(str)
 	call setreg('0',a:str)
 endfunction
 function s:setregClipBoard(str)
-	call system('+',a:str)
+	call setreg('+',a:str)
 endfunction
+"##
+
+"#
 
 "plugin
 if &compatible

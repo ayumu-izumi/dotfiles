@@ -1,8 +1,21 @@
 "wsl-------------------------------------------------------
-"commonFunc
+"# COMMAND
+command Wp call s:ConWinpathToWslpath()
+function s:ConWinpathToWslpath()
+	normal! gv"zy
+	let winpath=getreg('z')
+	let cmd = 'wslpath -u '''.winpath.''''
+	let wp = system(cmd)
+	call setreg('z',wp)
+	normal! dd"zP
+endfunction
+
+"## COMMON
 function! s:setregClipBoard(str)
 	call system('win32yank.exe -i',a:str)
 endfunction
+"##
+"#
 
 
 "for tmux
