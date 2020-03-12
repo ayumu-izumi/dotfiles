@@ -6,8 +6,9 @@ function s:ConWinpathToWslpath()
 	let winpath=getreg('z')
 	let cmd = 'wslpath -u '''.winpath.''''
 	let wp = system(cmd)
-	call setreg('z',wp)
-	normal! dd"zP
+	let wpLen = strlen(wp)-2
+	call setreg('z',wp[0:wpLen])
+	normal! gvd"zP
 endfunction
 
 "## COMMON
