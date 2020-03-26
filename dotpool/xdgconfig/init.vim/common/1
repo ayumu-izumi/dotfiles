@@ -15,8 +15,8 @@ set hlsearch
 set cursorline
 set list
 set listchars=tab:»-,trail:-,nbsp:%
-nnoremap <silent> <C-j> :bprev<CR>
-nnoremap <silent> <C-k> :bnext<CR>
+nnoremap <silent> <C-h> :bprev<CR>
+nnoremap <silent> <C-l> :bnext<CR>
 
 "edit
 set cindent
