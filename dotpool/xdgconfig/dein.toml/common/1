@@ -114,10 +114,8 @@ repo = 't9md/vim-quickhl'
 hook_add = '''
 nmap <Space>m <Plug>(quickhl-manual-this)
 xmap <Space>m <Plug>(quickhl-manual-this)
-nmap <Space>M <Plug>(quickhl-manual-clear)
-vmap <Space>M <Plug>(quickhl-manual-clear)
-nmap <Space>c <Plug>(quickhl-manual-reset)
-xmap <Space>c <Plug>(quickhl-manual-reset)
+nmap <Space>M <Plug>(quickhl-manual-reset)
+xmap <Space>M <Plug>(quickhl-manual-reset)
 nmap <Space>/ <Plug>(quickhl-cword-toggle)
 '''
 
