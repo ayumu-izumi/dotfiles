@@ -233,3 +233,9 @@ endfunction
 "for tmux
 noremap <silent> <Space>y :w !win32yank.exe -i<CR><CR>
 noremap <silent> <Space>p :r !win32yank.exe -o<CR><CR>
+
+"toggle IME when leave insert mode
+augroup Norml
+  autocmd!
+  autocmd InsertLeave * :call system('/mnt/c/Users/izumi/local/bin/zenhan.exe {im}')
+augroup END
