@@ -2,6 +2,10 @@
 "common keymaps
 source $HOME/.vimrc.keymap
 
+"switch
+filetype plugin on
+filetype indent on
+
 "file
 set noswapfile
 set nobackup
@@ -22,8 +26,25 @@ nnoremap <silent> <C-l> :bnext<CR>
 set cindent
 set tabstop=4
 set shiftwidth=4
+
+"sw=softtabstop, sts=shiftwidth, ts=tabstop, et=expandtabの略
+autocmd FileType c           setlocal sw=4 sts=4 ts=4 noet
+autocmd FileType html        setlocal sw=4 sts=4 ts=4 noet
+autocmd FileType ruby        setlocal sw=2 sts=2 ts=2 noet
+autocmd FileType js          setlocal sw=4 sts=4 ts=4 noet
+autocmd FileType zsh         setlocal sw=4 sts=4 ts=4 noet
+autocmd FileType python      setlocal sw=4 sts=4 ts=4 noet
+autocmd FileType scala       setlocal sw=4 sts=4 ts=4 noet
+autocmd FileType go          setlocal sw=4 sts=4 ts=4 noet
+autocmd FileType json        setlocal sw=4 sts=4 ts=4 noet
+autocmd FileType html        setlocal sw=4 sts=4 ts=4 noet
+autocmd FileType css         setlocal sw=4 sts=4 ts=4 noet
+autocmd FileType scss        setlocal sw=4 sts=4 ts=4 noet
+autocmd FileType sass        setlocal sw=4 sts=4 ts=4 noet
+autocmd FileType javascript  setlocal sw=4 sts=4 ts=4 noet
+autocmd FileType sql         setlocal sw=2 sts=2 ts=2 et
+
 vnoremap * "zy:let @/ = @z<CR>n
-let g:markdown_fenced_languages=['python','bash=sh','vb.net','sql','uml=plantuml']
 
 "# COMMAND
 command FP call s:GetFilePath()
@@ -60,7 +81,6 @@ endif
 if dein#check_install()
 	call dein#install()
 endif
-filetype plugin indent on
 syntax enable
 
 "coc.nvim----------------------------------------------------------
