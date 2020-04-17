@@ -1,5 +1,9 @@
 {
 	"languageserver":{
+		"kotlin": {
+			"command": "~/tool/lsp/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
+			"filetypes": ["kotlin"]
+		},
 		"elmLS": {
 			"command": "elm-language-server",
 			"filetypes": ["elm"],

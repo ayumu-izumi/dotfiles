@@ -121,6 +121,8 @@ nmap <Space>/ <Plug>(quickhl-cword-toggle)
 '''
 
 [[plugins]]
+repo = 'udalov/kotlin-vim'
+[[plugins]]
 repo = 'kazuph/previm'
 rev = 'feature/add-plantuml-plugin'
 hook_add = '''

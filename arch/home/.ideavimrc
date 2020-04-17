@@ -1,4 +1,5 @@
 "common----------------------------------------------------
+source $HOME/.vimrc.keymap
 set clipboard=unnamed,autoselect
 set surround
 set hlsearch

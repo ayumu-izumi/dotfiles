@@ -120,3 +120,5 @@ xmap <Space>M <Plug>(quickhl-manual-reset)
 nmap <Space>/ <Plug>(quickhl-cword-toggle)
 '''
 
+[[plugins]]
+repo = 'udalov/kotlin-vim'

@@ -13,6 +13,10 @@ set fileencodings=utf-8,sjis
 set hidden
 
 "view
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 set showtabline=2
 set number
 set hlsearch
