@@ -122,3 +122,7 @@ nmap <Space>/ <Plug>(quickhl-cword-toggle)
 
 [[plugins]]
 repo = 'udalov/kotlin-vim'
+hook_add = '''
+autocmd BufRead,BufNewFile *.kt setfiletype kotlin
+autocmd BufRead,BufNewFile *.kts setfiletype kotlin
+'''
