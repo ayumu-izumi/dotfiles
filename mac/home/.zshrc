@@ -23,7 +23,7 @@ export PATH=$PATH:$GOPATH/bin
 export GO111MODULE=on
 # alias
 alias vi=nvim
-alias vis=nvim -S
+alias vis='nvim -S'
 alias memo='nvim ~/memo/$(date "+%Y%m%d").md'
 
 # fzf
