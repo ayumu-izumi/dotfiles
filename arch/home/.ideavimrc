@@ -7,36 +7,65 @@ set incsearch
 set ignorecase
 set smartcase
 
-" general
-nnoremap ,a :<C-u>action GotoAction<CR>
-vnoremap ,a :<C-u>action GotoAction<CR>
-nnoremap ,e :<C-u>action SearchEverywhere<CR>
-nnoremap ,s :<C-u>action FileStructurePopup<CR>
-nnoremap ,g :<C-u>action FindInPath<CR>
-nnoremap ,r :<C-u>action RecentFiles<CR>
-
-" jump on code
-nnoremap gd :<C-u>action GotoDeclaration<CR>
-nnoremap gs :<C-u>action GotoSuperMethod<CR>
-nnoremap gi :<C-u>action GotoImplementation<CR>
-nnoremap gf :<C-u>action GotoFile<CR>
-nnoremap gb :<C-u>action JumpToLastChange<CR>
-nnoremap gu :<C-u>action ShowUsages<CR>
-nnoremap gt :<C-u>action GotoTest<CR>
-
-" code editing
-nnoremap == :<C-u>action ReformatCode<CR>
-vnoremap == :<C-u>action ReformatCode<CR>
-
-" show information
-nnoremap <C-I> :<C-u>action QuickJavaDoc<CR>
-
-nnoremap ,p :<C-u>action PasteMultiple<CR>
-nnoremap ,P :<C-u>action PasteMultiple<CR>
-
-nnoremap f :<C-u>action AceAction<CR>
-vnoremap f :<C-u>action AceAction<CR>
 
 " kick intellij commands
 nnoremap R :<C-u>action ChooseRunConfiguration<CR>
+
+nnoremap <C-o> :<C-u>action Back<CR>
+nnoremap <C-i> :<C-u>action Forward<CR>
+nnoremap <C-S-o> <C-o>
+nnoremap <C-S-i> <C-i>
+
+nnoremap [m :<C-u>action MethodUp<CR>
+nnoremap ]m :<C-u>action MethodDown<CR>
+
+nnoremap [c :<C-u>action VcsShowPrevChangeMarker<CR>
+nnoremap ]c :<C-u>action VcsShowNextChangeMarker<CR>
+nnoremap g; :<C-u>action JumpToLastChange<CR>
+nnoremap g, :<C-u>action JumpToNextChange<CR>
+
+nnoremap [e :<C-u>action GotoPreviousError<CR>
+nnoremap ]e :<C-u>action GotoNextError<CR>
+
+nnoremap K :<C-u>action QuickJavaDoc<CR>
+nnoremap gd :<C-u>action GotoDeclaration<CR>
+nnoremap gt :<C-u>action GotoTypeDeclaration<CR>
+nnoremap gi :<C-u>action GotoImplementation<CR>
+nnoremap gs :<C-u>action GotoSuperMethod<CR>
+nnoremap gT :<C-u>action GotoTest<CR>
+nnoremap <C-k> :<C-u>action ShowUsages<CR>
+
+nnoremap gb :<C-u>action JumpToLastChange<CR>
+
+nnoremap <Space>a :<C-u>action GotoAction<CR>
+nnoremap <Space>G :<C-u>action Generate<CR>
+nnoremap <Space>gn :<C-u>action NewClass<CR>
+nnoremap <Space>go :<C-u>action OverrideMethods<CR>
+nnoremap <Space>gc :<C-u>action GenerateConstructor<CR>
+nnoremap <Space>gg :<C-u>action GenerateGetter<CR>
+nnoremap <Space>gs :<C-u>action GenerateSetter<CR>
+nnoremap <Space>ga :<C-u>action GenerateGetterAndSetter<CR>
+nnoremap <Space>ge :<C-u>action GenerateEquals<CR>
+nnoremap <Space>gt :<C-u>action GenerateTestMethod<CR>
+nnoremap <Space>= :<C-u>action ReformatCode<CR>
+vnoremap <Space>= :<C-u>action ReformatCode<CR>
+nnoremap <Space>o :<C-u>action FileStructurePopup<CR>
+nnoremap <Space>q :<C-u>action CloseContent<CR>
+nnoremap <Space>Q :<C-u>action ReopenClosedTab<CR>
+nnoremap <Space>e :<C-u>action SearchEverywhere<CR>
+nnoremap <Space>f :<C-u>action GotoFile<CR>
+nnoremap <Space>F :<C-u>action FindInPath<CR>
+nnoremap <Space>r :<C-u>action RecentFiles<CR>
+nnoremap <Space>s :<C-u>action GotoClass<CR>
+nnoremap <Space>S :<C-u>action GotoSymbol<CR>
+nnoremap <Space>t :<C-u>action ActivateTerminalToolWindow<CR>
+nnoremap <Space>P :<C-u>action ManageRecentProjects<CR>
+nnoremap <Space>b :<C-u>action ToggleLineBreakpoint<CR>
+nnoremap <Space>cre :<C-u>action RenameElement<CR>
+nnoremap <Space>cS :<C-u>action ChangeSignature<CR>
+nnoremap <Space>cts :<C-u>action ChangeTypeSignature<CR>
+nnoremap <Space>p :<C-u>action PasteMultiple<CR>
+nnoremap <Space>p :<C-u>action PasteMultiple<CR>
+
+nnoremap <C-w>o :<C-u>action CloseAllEditorsButActive<CR>
 "/common---------------------------------------------------

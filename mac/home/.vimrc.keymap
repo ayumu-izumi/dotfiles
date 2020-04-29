@@ -1,4 +1,6 @@
 "keymap----------------------------------------------------
-nnoremap gh <C-o>
-nnoremap gl <C-i>
+nnoremap gOd gd
+nnoremap gOD gD
+nnoremap [<Space> O<Esc>j
+nnoremap ]<Space> o<Esc>k
 "/keymap---------------------------------------------------
