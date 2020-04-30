@@ -81,6 +81,12 @@ repo = 'kshenoy/vim-signature'
 repo = 'tpope/vim-surround'
 
 [[plugins]]
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'terryma/vim-multiple-cursors'
+
+[[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
 

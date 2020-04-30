@@ -1,11 +1,15 @@
 "common----------------------------------------------------
 source $HOME/.vimrc.keymap
+
 set clipboard=unnamed,autoselect
-set surround
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+set surround
+set multiple-cursors
+set commentary
 
 
 " kick intellij commands
