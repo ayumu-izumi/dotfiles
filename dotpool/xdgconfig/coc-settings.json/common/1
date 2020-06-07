@@ -1,4 +1,5 @@
 {
+	"coc.preferences.formatOnType":ture,
 	"languageserver":{
 		"kotlin": {
 			"command": "~/tool/lsp/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
@@ -21,6 +22,25 @@
 			"filetypes": ["go"],
 			"initializationOptions": {
 				"usePlaceholders": true
+			}
+		}
+	},
+	"haskell": {
+		"command": "hie-wrapper",
+		"args": ["--lsp"],
+		"rootPatterns": [
+			"stack.yaml",
+			"cabal.config",
+			"package.yaml"
+		],
+		"filetypes": [
+			"hs",
+			"lhs",
+			"haskell"
+		],
+		"initializationOptions": {
+			"languageServerHaskell": {
+				"hlintOn": true
 			}
 		}
 	},
