@@ -54,4 +54,7 @@ prompt steeef
 # alias
 alias trnja='trans -b :ja'
 alias trnen='trans -b :en'
+
+# Added by Amplify CLI binary installer
+export PATH="$HOME/.amplify/bin:$PATH"
 # /mac--------------------------------------------------
